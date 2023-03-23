@@ -1,6 +1,8 @@
 from pathlib import Path
 import streamlit as st
 from PIL import Image,ImageDraw,ImageOps
+import sys
+sys.path.insert(1, "C:/Users/Praks12/anaconda3/Lib/site-packages/streamlit_option_menu")
 from streamlit_option_menu import option_menu
 import numpy as np
 
