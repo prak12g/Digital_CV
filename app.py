@@ -51,8 +51,8 @@ def get_rounded_image(image):
 
 selected = option_menu(
     menu_title = None,
-    options = ["Home","Projects"],
-    icons=["house","book"],
+    options = ["Home","Projects","Contact"],
+    icons=["house","list-task","book"],
     menu_icon = "cast",
     default_index = 0,
     orientation = "horizontal",
@@ -197,5 +197,27 @@ if selected =="Projects":
         st.write('\n')
         st.write("<div style='text-align: center;'>Library Used: Whisper , OS , Subprocess </div>", unsafe_allow_html=True)
     st.write('\n')
+
+if selected =="Contact":
+    st.header(":mailbox: Get In Touch With Me!")
+    contact_form = """
+    <form action="https://formsubmit.co/prakhargupta.2001@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Your message here"></textarea>
+        <button type="submit">Send</button>
+    </form>
+    """
+
+    st.markdown(contact_form, unsafe_allow_html=True)
+
+    # Use Local CSS File
+    def local_css(file_name):
+        with open(file_name) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+
+    local_css("styles/style.css")
 
     
