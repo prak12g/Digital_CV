@@ -9,7 +9,7 @@ import numpy as np
 #---Path Settings---
 current_dir = Path(__file__).parent #if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
-resume_file = current_dir / "Resume_Prakhar.pdf"
+resume_file = current_dir / "Prakhar_Gupta_Resume.pdf"
 profile_pic = current_dir / "Profile_pic.png"
 robo1_pic= current_dir / "r1.png"
 robo2_pic= current_dir / "r2.png"
